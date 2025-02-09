@@ -37,8 +37,11 @@ final class SolicitudHttp implements Runnable {
 
     private void proceseSolicitud() throws Exception {
         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
         String linea;
+
         String nombreArchivo = "";
+
         String method = "";
 
         while ((linea = in.readLine()) != null && !linea.isEmpty()) {
