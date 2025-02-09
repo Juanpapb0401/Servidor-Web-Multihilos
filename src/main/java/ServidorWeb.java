@@ -45,8 +45,11 @@ final class SolicitudHttp implements Runnable {
         String method = "";
 
         while ((linea = in.readLine()) != null && !linea.isEmpty()) {
+
             System.out.println(linea);
+
             StringTokenizer partesLinea = new StringTokenizer(linea);
+
             method = partesLinea.nextToken();
             if (method.equals("GET")) {
                 nombreArchivo = "." + partesLinea.nextToken();
